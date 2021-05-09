@@ -11,8 +11,8 @@ import java.lang.reflect.Field;
 public class Controller {
 
     @FXML
-    private Button btn;
     public TextField messageField;
+    @FXML
     public TextArea mainChat;
 
     public void btnClick(ActionEvent actionEvent) {
