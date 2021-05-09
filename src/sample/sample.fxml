@@ -1,8 +1,51 @@
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <Label><BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </BorderPane.margin>
+            Новый крутой чат! Telegram отдыхает ))))
+        </Label>
+    </top>
+
+    <left>
+    </left>
+
+    <right>
+        <StackPane>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </BorderPane.margin>
+            <TextArea fx:id="userList" editable="false" maxWidth="200">USER LIST</TextArea>
+        </StackPane>
+    </right>
+
+    <center>
+        <StackPane>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </BorderPane.margin>
+            <TextArea AnchorPane.topAnchor="1" AnchorPane.leftAnchor="1" fx:id="mainChat" editable="false"></TextArea>
+        </StackPane>
+    </center>
+
+    <bottom>
+        <FlowPane>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </BorderPane.margin>
+            <TextField fx:id="messageField" minWidth="200" maxWidth="800" prefWidth="800"/>
+            <Button fx:id="btn" text="Send" onAction="#btnClick" minWidth="50" maxWidth="450" prefWidth="100"/>
+        </FlowPane>
+    </bottom>
+
+</BorderPane>
